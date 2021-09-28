@@ -5,7 +5,6 @@ export const copyArray = (grid) => {
         const row = []
         for(let j = 0; j < 9; j++){
             row.push(grid[i][j])
-            console.log(row)
         }
         newGrid.push(row)
     }

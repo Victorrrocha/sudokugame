@@ -1,4 +1,12 @@
 .keyboard {
+    margin-top: 2em;
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 400px;
+}
+
+.keyboardRow{
+    display: flex;
+    justify-content: space-around;
 }

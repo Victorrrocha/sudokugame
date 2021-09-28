@@ -6,7 +6,7 @@ import SelectProvider from './context/SelectProvider';
 function App() {
   return (
     <div className="App">
-      <h1>Sudoku</h1>
+      <h1 className="logo">Sudoku</h1>
       <SelectProvider>
         <Board />
         <Keyboard />

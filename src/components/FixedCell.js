@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useContext } from 'react'
-import classes from './FixedCell.module.css'
+import classes from './Cell.module.css'
 import SelectedContext from '../context/select-context'
 import CheckBoundaries from '../helpers/Boundaries'
 
@@ -18,10 +18,13 @@ export default function FixedCell({value, row, col}) {
                 setFocus(false)
             }
         }
+        else{
+            setFocus(false)
+        }
     }, [ctx, col, row] )
 
     return (
-        <div id={`${row}-${col}`} className = {`${classes.cell} + ${focus ? classes.focus : ""}`}>
+        <div id={`${row}-${col}`} className = {`${classes.cell} + ${focus ? classes.focus : ""} + ${classes.fixedCell}`}>
           <span className={classes.locked}>{value}</span>
         </div>
     )

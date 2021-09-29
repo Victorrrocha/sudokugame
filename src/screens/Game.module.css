@@ -1,0 +1,21 @@
+.game {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: column;
+    background-color: rgb(255, 255, 255);
+    height: 100vh;
+    font-family: 'Montserrat', sans-serif;
+  }
+  
+  .logo {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 3rem;
+  }
+
+  .cols {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      align-items: center;
+      justify-items: center;
+  }

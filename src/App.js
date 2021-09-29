@@ -1,17 +1,22 @@
+import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom'
+import Game from './screens/Game'
+import MainMenu from './screens/MainMenu';
 import './App.css';
-import Board from './components/Board';
-import Keyboard from './components/Keyboard';
-import SelectProvider from './context/SelectProvider';
 
 function App() {
   return (
-    <div className="App">
-      <h1 className="logo">Sudoku</h1>
-      <SelectProvider>
-        <Board />
-        <Keyboard />
-      </SelectProvider>
-    </div>
+    <Router>
+      <Switch>
+        <Route exact path="/sudoku">
+          <Game />
+        </Route>
+        
+        <Route path="/">
+          <MainMenu />
+        </Route>
+        
+      </Switch>
+    </Router>
   );
 }
 
